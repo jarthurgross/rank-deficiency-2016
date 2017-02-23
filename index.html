@@ -1,0 +1,2201 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Talk given on 2016-10-26 at the University of New Mexico">
+    <meta name="author" content="Jonathan A. Gross">
+    <title>Rank deficiency and the Euclidean geometry of quantum states</title>
+
+    <!-- libs stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,300italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="js/reveal/css/reveal.css">
+    <link rel="stylesheet" href="js/reveal/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="js/browsercast/browsercast.css">
+    <link rel="stylesheet" href="js/browsercast/timeline/timeline.css">
+    <link rel="stylesheet" href="js/browsercast/timeline/glyphicon.css">
+    <link rel="stylesheet" href="js/reveal/css/mystyle.css">
+
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'js/reveal/css/print/pdf.css' : 'js.reveal/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div id="browsercast">
+      <div id="bc-audio">
+        <code>
+          [[&quot;audio/rank-deficiency.ogg&quot;,[0,3767,0]]]
+        </code>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="slides">
+        <section class="titlepage" data-bc-start="0.00" data-bc-end="118.00">
+          <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">
+          <h1>Rank deficiency</h1>
+          <h3>and the Euclidean geometry of quantum states</h3>
+          </span>
+          <p>
+            <small><span xmlns:cc="http://creativecommons.org/ns#"
+              property="cc:attributionName">Jonathan A. Gross</span>,
+              Carlton M. Caves
+            </small>
+          </p>
+          <p>
+            <small><em>Center for Quantum Information and Control</em>,
+            University of New Mexico</small>
+          </p>
+          <p><a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/4.0/"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="img/by-sa.svg"></a>
+          </p>
+        </section>
+
+        <section data-bc-start="118.00" data-bc-end="261.00">
+          <h2>Quantum state tomography</h2>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mo>[</mo>
+                    <mtable rowspacing="4pt" columnspacing="1em">
+                      <mtr>
+                        <mtd>
+                          <msub>
+                            <mi>&#x03C1;<!-- ρ --></mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mn>11</mn>
+                            </mrow>
+                          </msub>
+                        </mtd>
+                        <mtd>
+                          <msub>
+                            <mi>&#x03C1;<!-- ρ --></mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mn>12</mn>
+                            </mrow>
+                          </msub>
+                        </mtd>
+                        <mtd>
+                          <mo>&#x22EF;<!-- ⋯ --></mo>
+                        </mtd>
+                        <mtd>
+                          <msub>
+                            <mi>&#x03C1;<!-- ρ --></mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mn>1</mn>
+                              <mi>d</mi>
+                            </mrow>
+                          </msub>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <msubsup>
+                            <mi>&#x03C1;<!-- ρ --></mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mn>12</mn>
+                            </mrow>
+                            <mo>&#x2217;<!-- ∗ --></mo>
+                          </msubsup>
+                        </mtd>
+                        <mtd>
+                          <msub>
+                            <mi>&#x03C1;<!-- ρ --></mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mn>22</mn>
+                            </mrow>
+                          </msub>
+                        </mtd>
+                        <mtd />
+                        <mtd>
+                          <msub>
+                            <mi>&#x03C1;<!-- ρ --></mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mn>2</mn>
+                              <mi>d</mi>
+                            </mrow>
+                          </msub>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <mo>&#x22EE;<!-- ⋮ --></mo>
+                        </mtd>
+                        <mtd />
+                        <mtd>
+                          <mo>&#x22F1;<!-- ⋱ --></mo>
+                        </mtd>
+                        <mtd>
+                          <mo>&#x22EE;<!-- ⋮ --></mo>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <msubsup>
+                            <mi>&#x03C1;<!-- ρ --></mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mn>1</mn>
+                              <mi>d</mi>
+                            </mrow>
+                            <mo>&#x2217;<!-- ∗ --></mo>
+                          </msubsup>
+                        </mtd>
+                        <mtd>
+                          <msubsup>
+                            <mi>&#x03C1;<!-- ρ --></mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mn>2</mn>
+                              <mi>d</mi>
+                            </mrow>
+                            <mo>&#x2217;<!-- ∗ --></mo>
+                          </msubsup>
+                        </mtd>
+                        <mtd>
+                          <mo>&#x22EF;<!-- ⋯ --></mo>
+                        </mtd>
+                        <mtd>
+                          <mn>1</mn>
+                          <mo>&#x2212;<!-- − --></mo>
+                          <munder>
+                            <mo>&#x2211;<!-- ∑ --></mo>
+                            <mi>j</mi>
+                          </munder>
+                          <msub>
+                            <mi>&#x03C1;<!-- ρ --></mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>j</mi>
+                              <mi>j</mi>
+                            </mrow>
+                          </msub>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                    <mo>]</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <p>Need <math xmlns="http://www.w3.org/1998/Math/MathML"><msup>
+          <mi>d</mi><mn>2</mn></msup><mo>&#x2212;<!-- − --></mo>
+          <mn>1</mn></math> parameters</p>
+        </section>
+
+        <section data-bc-start="261.00" data-bc-end="340.00">
+          <h2>Rank deficiency</h2>
+          <img src="img/Eulerangles.svg" height=300 />
+          <p class="cite"><cite>By Lionel Brits <a
+          href="http://creativecommons.org/licenses/by/3.0" title="Creative
+          Commons Attribution 3.0">CC BY 3.0</a>, <a
+          href="https://commons.wikimedia.org/w/index.php?curid=3362239">Link</a></cite></p>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <munderover>
+                    <mo>&#x2211;<!-- ∑ --></mo>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>j</mi>
+                      <mo>=</mo>
+                      <mn>1</mn>
+                    </mrow>
+                    <mi>r</mi>
+                  </munderover>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mi>j</mi>
+                  </msub>
+                  <mo fence="false" stretchy="false">|</mo>
+                  <msub>
+                    <mi>e</mi>
+                    <mi>j</mi>
+                  </msub>
+                  <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+                  <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+                  <msub>
+                    <mi>e</mi>
+                    <mi>j</mi>
+                  </msub>
+                  <mo fence="false" stretchy="false">|</mo>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="340.00" data-bc-end="382.00">
+          <h2>Rank deficiency</h2>
+          <img src="img/Eulerangles.svg" height=300 />
+          <p class="cite"><cite>By Lionel Brits <a
+          href="http://creativecommons.org/licenses/by/3.0" title="Creative
+          Commons Attribution 3.0">CC BY 3.0</a>, <a
+          href="https://commons.wikimedia.org/w/index.php?curid=3362239">Link</a></cite></p>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mn>2</mn>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">[</mo>
+                  </mrow>
+                  <mo stretchy="false">(</mo>
+                  <mi>d</mi>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                  <mo stretchy="false">)</mo>
+                  <mo>+</mo>
+                  <mo stretchy="false">(</mo>
+                  <mi>d</mi>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>2</mn>
+                  <mo stretchy="false">)</mo>
+                  <mo>+</mo>
+                  <mo>&#x22EF;<!-- ⋯ --></mo>
+                  <mo>+</mo>
+                  <mo stretchy="false">(</mo>
+                  <mi>d</mi>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mi>r</mi>
+                  <mo stretchy="false">)</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">]</mo>
+                  </mrow>
+                  <mo>+</mo>
+                  <mi>r</mi>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>r</mi>
+                  <mo stretchy="false">(</mo>
+                  <mn>2</mn>
+                  <mi>d</mi>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mi>r</mi>
+                  <mo stretchy="false">)</mo>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="382.00" data-bc-end="422.00">
+          <h2>Rank deficiency</h2>
+          <img src="img/Eulerangles.svg" height=300 />
+          <p class="cite"><cite>By Lionel Brits <a
+          href="http://creativecommons.org/licenses/by/3.0" title="Creative
+          Commons Attribution 3.0">CC BY 3.0</a>, <a
+          href="https://commons.wikimedia.org/w/index.php?curid=3362239">Link</a></cite></p>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mo stretchy="false">(</mo>
+                  <msup>
+                    <mi>d</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                  <mo stretchy="false">)</mo>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">[</mo>
+                  </mrow>
+                  <mi>r</mi>
+                  <mo stretchy="false">(</mo>
+                  <mn>2</mn>
+                  <mi>d</mi>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mi>r</mi>
+                  <mo stretchy="false">)</mo>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">]</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mo stretchy="false">(</mo>
+                  <mi>d</mi>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mi>r</mi>
+                  <msup>
+                    <mo stretchy="false">)</mo>
+                    <mn>2</mn>
+                  </msup>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="422.00" data-bc-end="594.00">
+          <h2>Maximum-likelihood estimation</h2>
+          <img src="img/mle_ests.svg" height=350 />
+          </p>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mover>
+                      <mi>&#x03C1;<!-- ρ --></mi>
+                      <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+                    </mover>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <munder>
+                    <mrow class="MJX-TeXAtom-OP">
+                      <mi mathvariant="normal">a</mi>
+                      <mi mathvariant="normal">r</mi>
+                      <mi mathvariant="normal">g</mi>
+                      <mspace width="thinmathspace" />
+                      <mi mathvariant="normal">m</mi>
+                      <mi mathvariant="normal">a</mi>
+                      <mi mathvariant="normal">x</mi>
+                    </mrow>
+                    <mrow>
+                      <mi>&#x03C1;<!-- ρ --></mi>
+                      <mo>&#x2265;<!-- ≥ --></mo>
+                      <mn>0</mn>
+                      <mo>,</mo>
+                      <mspace width="thinmathspace" />
+                      <mi>tr</mi>
+                      <mo>&#x2061;<!-- ⁡ --></mo>
+                      <mo stretchy="false">[</mo>
+                      <mi>&#x03C1;<!-- ρ --></mi>
+                      <mo stretchy="false">]</mo>
+                      <mo>=</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </munder>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi class="MJX-tex-caligraphic" mathvariant="script">L</mi>
+                  </mrow>
+                  <mo stretchy="false">(</mo>
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo stretchy="false">|</mo>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi mathvariant="bold">d</mi>
+                  </mrow>
+                  <mo stretchy="false">)</mo>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mover>
+                      <mi>A</mi>
+                      <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+                    </mover>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <munder>
+                    <mrow class="MJX-TeXAtom-OP">
+                      <mi mathvariant="normal">a</mi>
+                      <mi mathvariant="normal">r</mi>
+                      <mi mathvariant="normal">g</mi>
+                      <mspace width="thinmathspace" />
+                      <mi mathvariant="normal">m</mi>
+                      <mi mathvariant="normal">a</mi>
+                      <mi mathvariant="normal">x</mi>
+                    </mrow>
+                    <mrow>
+                      <mi>A</mi>
+                      <mo>=</mo>
+                      <msup>
+                        <mi>A</mi>
+                        <mo>&#x2020;<!-- † --></mo>
+                      </msup>
+                      <mo>,</mo>
+                      <mspace width="thinmathspace" />
+                      <mi>tr</mi>
+                      <mo>&#x2061;<!-- ⁡ --></mo>
+                      <mo stretchy="false">[</mo>
+                      <mi>A</mi>
+                      <mo stretchy="false">]</mo>
+                      <mo>=</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </munder>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi class="MJX-tex-caligraphic" mathvariant="script">L</mi>
+                  </mrow>
+                  <mo stretchy="false">(</mo>
+                  <mi>A</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo stretchy="false">|</mo>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi mathvariant="bold">d</mi>
+                  </mrow>
+                  <mo stretchy="false">)</mo>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          </p>
+          <p>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi class="MJX-tex-caligraphic" mathvariant="script">L</mi>
+                  </mrow>
+                  <mo stretchy="false">(</mo>
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo stretchy="false">|</mo>
+                  </mrow>
+                  <msub>
+                    <mi>d</mi>
+                    <mn>1</mn>
+                  </msub>
+                  <mo>,</mo>
+                  <mo>&#x2026;<!-- … --></mo>
+                  <mo>,</mo>
+                  <msub>
+                    <mi>d</mi>
+                    <mi>N</mi>
+                  </msub>
+                  <mo stretchy="false">)</mo>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>tr</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mo stretchy="false">[</mo>
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                  <msub>
+                    <mi>E</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <msub>
+                        <mi>d</mi>
+                        <mn>1</mn>
+                      </msub>
+                    </mrow>
+                  </msub>
+                  <mo stretchy="false">]</mo>
+                  <mo>&#x22EF;<!-- ⋯ --></mo>
+                  <mi>tr</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mo stretchy="false">[</mo>
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                  <msub>
+                    <mi>E</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <msub>
+                        <mi>d</mi>
+                        <mi>N</mi>
+                      </msub>
+                    </mrow>
+                  </msub>
+                  <mo stretchy="false">]</mo>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          </p>
+        </section>
+
+        <section data-bc-start="594.00" data-bc-end="660.00">
+          <h2>Maximum-likelihood estimation</h2>
+          <img src="img/likelihood.svg" height=400px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi class="MJX-tex-caligraphic" mathvariant="script">L</mi>
+                  </mrow>
+                  <mo stretchy="false">(</mo>
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo stretchy="false">|</mo>
+                  </mrow>
+                  <msub>
+                    <mi>d</mi>
+                    <mn>1</mn>
+                  </msub>
+                  <mo>,</mo>
+                  <mo>&#x2026;<!-- … --></mo>
+                  <mo>,</mo>
+                  <msub>
+                    <mi>d</mi>
+                    <mi>N</mi>
+                  </msub>
+                  <mo stretchy="false">)</mo>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>tr</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mo stretchy="false">[</mo>
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                  <msub>
+                    <mi>E</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <msub>
+                        <mi>d</mi>
+                        <mn>1</mn>
+                      </msub>
+                    </mrow>
+                  </msub>
+                  <mo stretchy="false">]</mo>
+                  <mo>&#x22EF;<!-- ⋯ --></mo>
+                  <mi>tr</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mo stretchy="false">[</mo>
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                  <msub>
+                    <mi>E</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <msub>
+                        <mi>d</mi>
+                        <mi>N</mi>
+                      </msub>
+                    </mrow>
+                  </msub>
+                  <mo stretchy="false">]</mo>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="660.00" data-bc-end="820.00">
+          <h2>Full-rank probability</h2>
+          <img src="img/joint_mle.svg" height=400px />
+        </section>
+
+        <section data-bc-start="820.00" data-bc-end="867.00">
+          <h2>Full-rank probability</h2>
+          <img src="img/joint_cov.svg" height=400px />
+        </section>
+
+        <section data-bc-start="867.00" data-bc-end="941.00">
+          <h2>Classical Fisher information</h2>
+          <img src="img/metrics.svg" height=400px />
+        </section>
+
+        <section data-bc-start="941.00" data-bc-end="1020.00">
+          <h2>Euclidean metric</h2>
+          <img src="img/euclidean_metric.svg" height=350px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>d</mi>
+                  <msup>
+                    <mi>s</mi>
+                    <mn>2</mn>
+                  </msup>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>&#x221D;<!-- ∝ --></mo>
+                  <mi>d</mi>
+                  <msup>
+                    <mi>x</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mo>+</mo>
+                  <mi>d</mi>
+                  <msup>
+                    <mi>y</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mo>+</mo>
+                  <mi>d</mi>
+                  <msup>
+                    <mi>z</mi>
+                    <mn>2</mn>
+                  </msup>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>&#x221D;<!-- ∝ --></mo>
+                  <mi>I</mi>
+                  <mo>+</mo>
+                  <mi>x</mi>
+                  <msub>
+                    <mi>&#x03C3;<!-- σ --></mi>
+                    <mi>x</mi>
+                  </msub>
+                  <mo>+</mo>
+                  <mi>y</mi>
+                  <msub>
+                    <mi>&#x03C3;<!-- σ --></mi>
+                    <mi>y</mi>
+                  </msub>
+                  <mo>+</mo>
+                  <mi>z</mi>
+                  <msub>
+                    <mi>&#x03C3;<!-- σ --></mi>
+                    <mi>z</mi>
+                  </msub>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="1020.00" data-bc-end="1090.00">
+          <h2>Solid angle</h2>
+          <img src="img/solid_angle.svg" height=400px />
+        </section>
+
+        <section data-bc-start="1090.00" data-bc-end="1370.00">
+          <h2>Solid angle</h2>
+          <img src="img/solid_angle.svg" height=200px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi mathvariant="normal">&#x2220;<!-- ∠ --></mi>
+                  <mi>&#x03C8;<!-- ψ --></mi>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <munder>
+                    <mo movablelimits="true" form="prefix">lim</mo>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>&#x03B5;<!-- ε --></mi>
+                      <mo stretchy="false">&#x2192;<!-- → --></mo>
+                      <mn>0</mn>
+                    </mrow>
+                  </munder>
+                  <mfrac>
+                    <mrow>
+                      <mi>vol</mi>
+                      <mo>&#x2061;<!-- ⁡ --></mo>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mo maxsize="1.2em" minsize="1.2em">[</mo>
+                      </mrow>
+                      <msubsup>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi class="MJX-tex-caligraphic" mathvariant="script">B</mi>
+                        </mrow>
+                        <mi>&#x03B5;<!-- ε --></mi>
+                        <mi>&#x03C8;<!-- ψ --></mi>
+                      </msubsup>
+                      <mo>&#x2229;<!-- ∩ --></mo>
+                      <msub>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+                        </mrow>
+                        <mi>d</mi>
+                      </msub>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mo maxsize="1.2em" minsize="1.2em">]</mo>
+                      </mrow>
+                    </mrow>
+                    <mrow>
+                      <mi>vol</mi>
+                      <mo>&#x2061;<!-- ⁡ --></mo>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mo maxsize="1.2em" minsize="1.2em">[</mo>
+                      </mrow>
+                      <msubsup>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi class="MJX-tex-caligraphic" mathvariant="script">B</mi>
+                        </mrow>
+                        <mi>&#x03B5;<!-- ε --></mi>
+                        <mi>&#x03C8;<!-- ψ --></mi>
+                      </msubsup>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mo maxsize="1.2em" minsize="1.2em">]</mo>
+                      </mrow>
+                    </mrow>
+                  </mfrac>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <msubsup>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi class="MJX-tex-caligraphic" mathvariant="script">B</mi>
+                    </mrow>
+                    <mi>&#x03B5;<!-- ε --></mi>
+                    <mi>&#x03C8;<!-- ψ --></mi>
+                  </msubsup>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.623em" minsize="1.623em">{</mo>
+                  </mrow>
+                  <mi>A</mi>
+                  <mspace width="thinmathspace" />
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.623em" minsize="1.623em">|</mo>
+                  </mrow>
+                  <mspace width="thinmathspace" />
+                  <mi>A</mi>
+                  <mo>=</mo>
+                  <msup>
+                    <mi>A</mi>
+                    <mo>&#x2020;<!-- † --></mo>
+                  </msup>
+                  <mo>,</mo>
+                  <mspace width="thinmathspace" />
+                  <mi>tr</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mo stretchy="false">[</mo>
+                  <mi>A</mi>
+                  <mo stretchy="false">]</mo>
+                  <mo>=</mo>
+                  <mn>1</mn>
+                  <mo>,</mo>
+                  <mspace width="thinmathspace" />
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo fence="true" stretchy="true" symmetric="true" maxsize="1.2em" minsize="1.2em">&#x2225;</mo>
+                  </mrow>
+                  <mi>A</mi>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mrow>
+                    <mo>|</mo>
+                    <mi>&#x03C8;<!-- ψ --></mi>
+                    <mo>&#x27E9;</mo>
+                    <mo>&#x27E8;</mo>
+                    <mi>&#x03C8;<!-- ψ --></mi>
+                    <mo>|</mo>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo fence="true" stretchy="true" symmetric="true" maxsize="1.2em" minsize="1.2em">&#x2225;</mo>
+                  </mrow>
+                  <mo>&#x2264;<!-- ≤ --></mo>
+                  <mi>&#x03B5;<!-- ε --></mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.623em" minsize="1.623em">}</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+                    </mrow>
+                    <mi>d</mi>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.623em" minsize="1.623em">{</mo>
+                  </mrow>
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                  <mspace width="thinmathspace" />
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.623em" minsize="1.623em">|</mo>
+                  </mrow>
+                  <mspace width="thinmathspace" />
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                  <mo>&#x2208;<!-- ∈ --></mo>
+                  <msup>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi mathvariant="double-struck">C</mi>
+                    </mrow>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>d</mi>
+                      <mo>&#x00D7;<!-- × --></mo>
+                      <mi>d</mi>
+                    </mrow>
+                  </msup>
+                  <mo>,</mo>
+                  <mspace width="thinmathspace" />
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                  <mo>&#x2265;<!-- ≥ --></mo>
+                  <mn>0</mn>
+                  <mo>,</mo>
+                  <mspace width="thinmathspace" />
+                  <mi>tr</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mo stretchy="false">[</mo>
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                  <mo stretchy="false">]</mo>
+                  <mo>=</mo>
+                  <mn>1</mn>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.623em" minsize="1.623em">}</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="1370.00" data-bc-end="1412.00">
+          <h2>Polar coördinates</h2>
+          <img src="img/3D_Spherical.svg" height=250px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>x</mi>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>r</mi>
+                  <mi>cos</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mi>&#x03C6;<!-- φ --></mi>
+                  <mi>sin</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mi>&#x03B8;<!-- θ --></mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>y</mi>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>r</mi>
+                  <mi>sin</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mi>&#x03C6;<!-- φ --></mi>
+                  <mi>sin</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mi>&#x03B8;<!-- θ --></mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>z</mi>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>r</mi>
+                  <mi>cos</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mi>&#x03B8;<!-- θ --></mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>d</mi>
+                  <msup>
+                    <mi>s</mi>
+                    <mn>2</mn>
+                  </msup>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <msup>
+                    <mi>r</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mo>+</mo>
+                  <msup>
+                    <mi>r</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">(</mo>
+                  </mrow>
+                  <mi>d</mi>
+                  <msup>
+                    <mi>&#x03B8;<!-- θ --></mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mo>+</mo>
+                  <msup>
+                    <mi>sin</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mi>&#x03B8;<!-- θ --></mi>
+                  <mi>d</mi>
+                  <msup>
+                    <mi>&#x03C6;<!-- φ --></mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd />
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <msup>
+                    <mi>r</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mo>+</mo>
+                  <msup>
+                    <mi>r</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mi>d</mi>
+                  <msup>
+                    <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
+                    <mn>2</mn>
+                  </msup>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="1412.00" data-bc-end="1439.00">
+          <h2>Polar coördinates</h2>
+          <img src="img/3D_Spherical.svg" height=250px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>d</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <mi>r</mi>
+                  <mspace width="thinmathspace" />
+                  <msup>
+                    <mi>r</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mi>d</mi>
+                  <mi>&#x03B8;<!-- θ --></mi>
+                  <mspace width="thinmathspace" />
+                  <mi>sin</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mi>&#x03B8;<!-- θ --></mi>
+                  <mi>d</mi>
+                  <mi>&#x03C6;<!-- φ --></mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd />
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <mi>r</mi>
+                  <mspace width="thinmathspace" />
+                  <msup>
+                    <mi>r</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mi>d</mi>
+                  <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="1439.00" data-bc-end="1444.00">
+          <h2>Polar coördinates</h2>
+          <img src="img/line_measure.svg" height=350px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>d</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <mi>r</mi>
+                  <mspace width="thinmathspace" />
+                  <msup>
+                    <mi>r</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mi>d</mi>
+                  <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="1444.00" data-bc-end="1455.00">
+          <h2>Polar coördinates</h2>
+          <img src="img/scale_factor.svg" height=350px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>d</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <mi>r</mi>
+                  <mspace width="thinmathspace" />
+                  <msup>
+                    <mi>r</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mi>d</mi>
+                  <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="1455.00" data-bc-end="1464.00">
+          <h2>Polar coördinates</h2>
+          <img src="img/spherical_shell.svg" height=350px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>d</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <mi>r</mi>
+                  <mspace width="thinmathspace" />
+                  <msup>
+                    <mi>r</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mi>d</mi>
+                  <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="1464.00" data-bc-end="1493.00">
+          <h2>Spectral coördinates</h2>
+          <img src="img/Bloch_Sphere.svg" height=300px />
+          <p>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>U</mi>
+                  <mi mathvariant="normal">&#x039B;<!-- Λ --></mi>
+                  <msup>
+                    <mi>U</mi>
+                    <mo>&#x2020;<!-- † --></mo>
+                  </msup>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          </p>
+          <p>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>U</mi>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mo>[</mo>
+                    <mtable rowspacing="4pt" columnspacing="1em">
+                      <mtr>
+                        <mtd>
+                          <mi>cos</mi>
+                          <mo>&#x2061;<!-- ⁡ --></mo>
+                          <mi>&#x03B8;<!-- θ --></mi>
+                        </mtd>
+                        <mtd>
+                          <mi>sin</mi>
+                          <mo>&#x2061;<!-- ⁡ --></mo>
+                          <mi>&#x03B8;<!-- θ --></mi>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <msup>
+                            <mi>e</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>i</mi>
+                              <mi>&#x03D5;<!-- ϕ --></mi>
+                            </mrow>
+                          </msup>
+                          <mi>sin</mi>
+                          <mo>&#x2061;<!-- ⁡ --></mo>
+                          <mi>&#x03B8;<!-- θ --></mi>
+                        </mtd>
+                        <mtd>
+                          <mo>&#x2212;<!-- − --></mo>
+                          <msup>
+                            <mi>e</mi>
+                            <mrow class="MJX-TeXAtom-ORD">
+                              <mi>i</mi>
+                              <mi>&#x03D5;<!-- ϕ --></mi>
+                            </mrow>
+                          </msup>
+                          <mi>cos</mi>
+                          <mo>&#x2061;<!-- ⁡ --></mo>
+                          <mi>&#x03B8;<!-- θ --></mi>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                    <mo>]</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi mathvariant="normal">&#x039B;<!-- Λ --></mi>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mo>[</mo>
+                    <mtable rowspacing="4pt" columnspacing="1em">
+                      <mtr>
+                        <mtd>
+                          <msub>
+                            <mi>&#x03BB;<!-- λ --></mi>
+                            <mn>1</mn>
+                          </msub>
+                        </mtd>
+                        <mtd>
+                          <mn>0</mn>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <mn>0</mn>
+                        </mtd>
+                        <mtd>
+                          <msub>
+                            <mi>&#x03BB;<!-- λ --></mi>
+                            <mn>2</mn>
+                          </msub>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                    <mo>]</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          </p>
+        </section>
+
+        <section data-bc-start="1493.00" data-bc-end="1516.00">
+          <h2>Spectral coördinates</h2>
+          <img src="img/simplex_measure.svg" height=300px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>d</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <msub>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi class="MJX-tex-caligraphic" mathvariant="script">A</mi>
+                    </mrow>
+                    <mn>1</mn>
+                  </msub>
+                  <mspace width="thinmathspace" />
+                  <mo stretchy="false">(</mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mn>1</mn>
+                  </msub>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mn>2</mn>
+                  </msub>
+                  <msup>
+                    <mo stretchy="false">)</mo>
+                    <mn>2</mn>
+                  </msup>
+                  <mi>d</mi>
+                  <msub>
+                    <mi mathvariant="normal">&#x03A5;<!-- Υ --></mi>
+                    <mn>2</mn>
+                  </msub>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="1516.00" data-bc-end="1549.00">
+          <h2>Spectral coördinates</h2>
+          <img src="img/simplex_scale_factor.svg" height=300px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>d</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <msub>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi class="MJX-tex-caligraphic" mathvariant="script">A</mi>
+                    </mrow>
+                    <mn>1</mn>
+                  </msub>
+                  <mspace width="thinmathspace" />
+                  <mo stretchy="false">(</mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mn>1</mn>
+                  </msub>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mn>2</mn>
+                  </msub>
+                  <msup>
+                    <mo stretchy="false">)</mo>
+                    <mn>2</mn>
+                  </msup>
+                  <mi>d</mi>
+                  <msub>
+                    <mi mathvariant="normal">&#x03A5;<!-- Υ --></mi>
+                    <mn>2</mn>
+                  </msub>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="1549.00" data-bc-end="1582.00">
+          <h2>Spectral coördinates</h2>
+          <img src="img/basis_shell.svg" height=300px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>d</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <msub>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi class="MJX-tex-caligraphic" mathvariant="script">A</mi>
+                    </mrow>
+                    <mn>1</mn>
+                  </msub>
+                  <mspace width="thinmathspace" />
+                  <mo stretchy="false">(</mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mn>1</mn>
+                  </msub>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mn>2</mn>
+                  </msub>
+                  <msup>
+                    <mo stretchy="false">)</mo>
+                    <mn>2</mn>
+                  </msup>
+                  <mi>d</mi>
+                  <msub>
+                    <mi mathvariant="normal">&#x03A5;<!-- Υ --></mi>
+                    <mn>2</mn>
+                  </msub>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="1582.00" data-bc-end="1619.00">
+          <h2>Solid angle</h2>
+          <img src="img/solid_angle.svg" height=350px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi mathvariant="normal">&#x2220;<!-- ∠ --></mi>
+                  <mi>&#x03C8;<!-- ψ --></mi>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mfrac>
+                    <mrow>
+                      <msub>
+                        <mo>&#x222B;<!-- ∫ --></mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi class="MJX-tex-caligraphic" mathvariant="script">B</mi>
+                          </mrow>
+                          <mo>&#x2229;<!-- ∩ --></mo>
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+                          </mrow>
+                        </mrow>
+                      </msub>
+                      <mi>d</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                      </mrow>
+                    </mrow>
+                    <mrow>
+                      <msub>
+                        <mo>&#x222B;<!-- ∫ --></mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi class="MJX-tex-caligraphic" mathvariant="script">B</mi>
+                          </mrow>
+                        </mrow>
+                      </msub>
+                      <mi>d</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                      </mrow>
+                    </mrow>
+                  </mfrac>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="1619.00" data-bc-end="1818.00">
+          <h2>Higher dimensions</h2>
+          <img src="img/triangle_measure.svg" height=350px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>d</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <msub>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi class="MJX-tex-caligraphic" mathvariant="script">A</mi>
+                    </mrow>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>d</mi>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                  <mspace width="thinmathspace" />
+                  <munder>
+                    <mo>&#x220F;<!-- ∏ --></mo>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>j</mi>
+                      <mo>&lt;</mo>
+                      <mi>k</mi>
+                    </mrow>
+                  </munder>
+                  <mo stretchy="false">(</mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mi>j</mi>
+                  </msub>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mi>k</mi>
+                  </msub>
+                  <msup>
+                    <mo stretchy="false">)</mo>
+                    <mn>2</mn>
+                  </msup>
+                  <mspace width="thinmathspace" />
+                  <mi>d</mi>
+                  <msub>
+                    <mi mathvariant="normal">&#x03A5;<!-- Υ --></mi>
+                    <mi>d</mi>
+                  </msub>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="1818.00" data-bc-end="1926.00">
+          <h2>Qutrit</h2>
+          <img src="img/retrit_simplex.svg" height=400px />
+        </section>
+
+        <section data-bc-start="1926.00" data-bc-end="1959.00">
+          <h2>Qutrit</h2>
+          <img src="img/retrit_12.svg" height=400px />
+        </section>
+
+        <section data-bc-start="1959.00" data-bc-end="1976.00">
+          <h2>Qutrit</h2>
+          <img src="img/retrit_13.svg" height=400px />
+        </section>
+
+        <section data-bc-start="1976.00" data-bc-end="2006.00">
+          <h2>Qutrit</h2>
+          <img src="img/slices_13.svg" height=400px />
+        </section>
+
+        <section data-bc-start="2006.00" data-bc-end="2095.00">
+          <h2>Qutrit</h2>
+          <img src="img/slice_fracs.svg" height=300px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>d</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <msub>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi class="MJX-tex-caligraphic" mathvariant="script">A</mi>
+                    </mrow>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>d</mi>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                  <mspace width="thinmathspace" />
+                  <munder>
+                    <mo>&#x220F;<!-- ∏ --></mo>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>j</mi>
+                      <mo>&lt;</mo>
+                      <mi>k</mi>
+                    </mrow>
+                  </munder>
+                  <mo stretchy="false">(</mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mi>j</mi>
+                  </msub>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mi>k</mi>
+                  </msub>
+                  <msup>
+                    <mo stretchy="false">)</mo>
+                    <mn>2</mn>
+                  </msup>
+                  <mspace width="thinmathspace" />
+                  <mi>d</mi>
+                  <msub>
+                    <mi mathvariant="normal">&#x03A5;<!-- Υ --></mi>
+                    <mi>d</mi>
+                  </msub>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>d</mi>
+                  <msup>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                    </mrow>
+                    <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+                  </msup>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <msub>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi class="MJX-tex-caligraphic" mathvariant="script">A</mi>
+                    </mrow>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>d</mi>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                  <mspace width="thinmathspace" />
+                  <munder>
+                    <mo>&#x220F;<!-- ∏ --></mo>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>j</mi>
+                      <mo>&lt;</mo>
+                      <mi>k</mi>
+                    </mrow>
+                  </munder>
+                  <mo stretchy="false">(</mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mi>j</mi>
+                  </msub>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mi>k</mi>
+                  </msub>
+                  <msup>
+                    <mo stretchy="false">)</mo>
+                    <mn>2</mn>
+                  </msup>
+                  <mspace width="thinmathspace" />
+                  <mi>d</mi>
+                  <msub>
+                    <mi mathvariant="normal">&#x03A5;<!-- Υ --></mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>d</mi>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="2095.00" data-bc-end="2155.00">
+          <h2>Qutrit</h2>
+          <img src="img/slices_23.svg" height=400px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>d</mi>
+                  <msup>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                    </mrow>
+                    <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+                  </msup>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <msub>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi class="MJX-tex-caligraphic" mathvariant="script">A</mi>
+                    </mrow>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>d</mi>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                  <mspace width="thinmathspace" />
+                  <munder>
+                    <mo>&#x220F;<!-- ∏ --></mo>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>j</mi>
+                      <mo>&lt;</mo>
+                      <mi>k</mi>
+                    </mrow>
+                  </munder>
+                  <mo stretchy="false">(</mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mi>j</mi>
+                  </msub>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mi>k</mi>
+                  </msub>
+                  <msup>
+                    <mo stretchy="false">)</mo>
+                    <mn>2</mn>
+                  </msup>
+                  <mspace width="thinmathspace" />
+                  <mi>d</mi>
+                  <msub>
+                    <mi mathvariant="normal">&#x03A5;<!-- Υ --></mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>d</mi>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="2155.00" data-bc-end="2167.00">
+          <h2>Qutrit</h2>
+          <img src="img/Kugelschale.svg" height=400px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>vol</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mo stretchy="false">(</mo>
+                  <mtext>shell</mtext>
+                  <mo stretchy="false">)</mo>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <msub>
+                    <mo>&#x222D;<!-- ∭ --></mo>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>r</mi>
+                      <mo>&#x2264;<!-- ≤ --></mo>
+                      <mo>&#x2225;<!-- ∥ --></mo>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi mathvariant="bold">x</mi>
+                      </mrow>
+                      <mo>&#x2225;<!-- ∥ --></mo>
+                      <mo>&#x2264;<!-- ≤ --></mo>
+                      <mi>R</mi>
+                    </mrow>
+                  </msub>
+                  <mi>d</mi>
+                  <mi>x</mi>
+                  <mspace width="thinmathspace" />
+                  <mi>d</mi>
+                  <mi>y</mi>
+                  <mspace width="thinmathspace" />
+                  <mi>d</mi>
+                  <mi>z</mi>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="2167.00" data-bc-end="2186.00">
+          <h2>Qutrit</h2>
+          <img src="img/shell_integration.svg" height=400px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>vol</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mo stretchy="false">(</mo>
+                  <mtext>shell</mtext>
+                  <mo stretchy="false">)</mo>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <msubsup>
+                    <mo>&#x222B;<!-- ∫ --></mo>
+                    <mi>r</mi>
+                    <mi>R</mi>
+                  </msubsup>
+                  <mi>d</mi>
+                  <mi>r</mi>
+                  <mspace width="thinmathspace" />
+                  <msup>
+                    <mi>r</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <msub>
+                    <mo>&#x222B;<!-- ∫ --></mo>
+                    <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
+                  </msub>
+                  <mi>d</mi>
+                  <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="2186.00" data-bc-end="2209.00">
+          <h2>Qutrit</h2>
+          <img src="img/slices_23.svg" height=400px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>d</mi>
+                  <msup>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                    </mrow>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+                      <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+                    </mrow>
+                  </msup>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>d</mi>
+                  <msub>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi class="MJX-tex-caligraphic" mathvariant="script">A</mi>
+                    </mrow>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>d</mi>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                  <mspace width="thinmathspace" />
+                  <munder>
+                    <mo>&#x220F;<!-- ∏ --></mo>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>j</mi>
+                      <mo>&lt;</mo>
+                      <mi>k</mi>
+                    </mrow>
+                  </munder>
+                  <mo stretchy="false">(</mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mi>j</mi>
+                  </msub>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <msub>
+                    <mi>&#x03BB;<!-- λ --></mi>
+                    <mi>k</mi>
+                  </msub>
+                  <msup>
+                    <mo stretchy="false">)</mo>
+                    <mn>2</mn>
+                  </msup>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="2209.00" data-bc-end="2274.00">
+          <h2>Qutrit</h2>
+          <img src="img/qutrit_ball.svg" height=350px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi mathvariant="normal">&#x2220;<!-- ∠ --></mi>
+                  <mi>&#x03C8;<!-- ψ --></mi>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mfrac>
+                    <mrow>
+                      <msub>
+                        <mo>&#x222B;<!-- ∫ --></mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi class="MJX-tex-caligraphic" mathvariant="script">B</mi>
+                          </mrow>
+                          <mo>&#x2229;<!-- ∩ --></mo>
+                          <mi mathvariant="normal">&#x0394;<!-- Δ --></mi>
+                        </mrow>
+                      </msub>
+                      <mi>d</mi>
+                      <msup>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                        </mrow>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+                          <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+                        </mrow>
+                      </msup>
+                    </mrow>
+                    <mrow>
+                      <msub>
+                        <mo>&#x222B;<!-- ∫ --></mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mrow class="MJX-TeXAtom-ORD">
+                            <mi class="MJX-tex-caligraphic" mathvariant="script">B</mi>
+                          </mrow>
+                        </mrow>
+                      </msub>
+                      <mi>d</mi>
+                      <msup>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi class="MJX-tex-caligraphic" mathvariant="script">V</mi>
+                        </mrow>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+                          <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+                        </mrow>
+                      </msup>
+                    </mrow>
+                  </mfrac>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="2274.00" data-bc-end="2346.00">
+          <h2>Qutrit</h2>
+          <img src="img/qutrit_ball.svg" height=350px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi mathvariant="normal">&#x2220;<!-- ∠ --></mi>
+                  <msub>
+                    <mi>&#x03C8;<!-- ψ --></mi>
+                    <mn>3</mn>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mfrac>
+                    <mn>1</mn>
+                    <mn>6</mn>
+                  </mfrac>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mfrac>
+                    <msqrt>
+                      <mn>3</mn>
+                    </msqrt>
+                    <mrow>
+                      <mn>4</mn>
+                      <mi>&#x03C0;<!-- π --></mi>
+                    </mrow>
+                  </mfrac>
+                  <mo>=</mo>
+                  <mn>0.0288</mn>
+                  <mo>&#x2026;<!-- … --></mo>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd />
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mi>Pr</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">[</mo>
+                  </mrow>
+                  <mi>rank</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mo stretchy="false">(</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mover>
+                      <mi>&#x03C1;<!-- ρ --></mi>
+                      <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+                    </mover>
+                  </mrow>
+                  <mo stretchy="false">)</mo>
+                  <mo>=</mo>
+                  <mn>3</mn>
+                  <mspace width="thinmathspace" />
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">|</mo>
+                  </mrow>
+                  <mspace width="thinmathspace" />
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mo>|</mo>
+                    <mi>&#x03C8;<!-- ψ --></mi>
+                    <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+                    <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+                    <mi>&#x03C8;<!-- ψ --></mi>
+                    <mo>|</mo>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">]</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="2346.00" data-bc-end="2549.00">
+          <h2>Qutrit</h2>
+          <img src="img/qutrit_polar_cone.svg" height=350px />
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+              <mtr>
+                <mtd>
+                  <mi>Pr</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">[</mo>
+                  </mrow>
+                  <mi>rank</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mo stretchy="false">(</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mover>
+                      <mi>&#x03C1;<!-- ρ --></mi>
+                      <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+                    </mover>
+                  </mrow>
+                  <mo stretchy="false">)</mo>
+                  <mo>=</mo>
+                  <mn>1</mn>
+                  <mspace width="thinmathspace" />
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">|</mo>
+                  </mrow>
+                  <mspace width="thinmathspace" />
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mo>|</mo>
+                    <mi>&#x03C8;<!-- ψ --></mi>
+                    <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+                    <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+                    <mi>&#x03C8;<!-- ψ --></mi>
+                    <mo>|</mo>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">]</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mfrac>
+                    <mn>1</mn>
+                    <mn>3</mn>
+                  </mfrac>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mfrac>
+                    <msqrt>
+                      <mn>3</mn>
+                    </msqrt>
+                    <mrow>
+                      <mn>4</mn>
+                      <mi>&#x03C0;<!-- π --></mi>
+                    </mrow>
+                  </mfrac>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>Pr</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">[</mo>
+                  </mrow>
+                  <mi>rank</mi>
+                  <mo>&#x2061;<!-- ⁡ --></mo>
+                  <mo stretchy="false">(</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mover>
+                      <mi>&#x03C1;<!-- ρ --></mi>
+                      <mo stretchy="false">&#x005E;<!-- ^ --></mo>
+                    </mover>
+                  </mrow>
+                  <mo stretchy="false">)</mo>
+                  <mo>=</mo>
+                  <mn>2</mn>
+                  <mspace width="thinmathspace" />
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">|</mo>
+                  </mrow>
+                  <mspace width="thinmathspace" />
+                  <mi>&#x03C1;<!-- ρ --></mi>
+                  <mo>=</mo>
+                  <mrow>
+                    <mo>|</mo>
+                    <mi>&#x03C8;<!-- ψ --></mi>
+                    <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+                    <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+                    <mi>&#x03C8;<!-- ψ --></mi>
+                    <mo>|</mo>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo maxsize="1.2em" minsize="1.2em">]</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mi></mi>
+                  <mo>=</mo>
+                  <mfrac>
+                    <mn>1</mn>
+                    <mn>2</mn>
+                  </mfrac>
+                  <mo>+</mo>
+                  <mfrac>
+                    <msqrt>
+                      <mn>3</mn>
+                    </msqrt>
+                    <mrow>
+                      <mn>2</mn>
+                      <mi>&#x03C0;<!-- π --></mi>
+                    </mrow>
+                  </mfrac>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+        </section>
+
+        <section data-bc-start="2549.00" data-bc-end="2612.00">
+          <h2>Even higher dimensions</h2>
+          <img src="img/tetrahedral_measure.svg" height=400 />
+        </section>
+
+        <section data-bc-start="2612.00" data-bc-end="2862.00">
+          <h2>Even higher dimensions</h2>
+          <img src="img/tetrahedral_measure_simplex.svg" height=400 />
+        </section>
+
+        <section data-bc-start="2862.00" data-bc-end="2876.00">
+          <h2>Even higher dimensions</h2>
+          <img src="img/numerics.svg" height=400 />
+        </section>
+
+        <section data-bc-start="2876.00" data-bc-end="2896.00">
+          <h2>Even higher dimensions</h2>
+          <img src="img/numerics_log.svg" height=400 />
+        </section>
+
+        <section data-bc-start="2896.00" data-bc-end="2934.00">
+          <h2>Even higher dimensions</h2>
+          <img src="img/numerics_log_log.svg" height=400 />
+        </section>
+
+        <section data-bc-start="2934.00" data-bc-end="3767.00">
+          <h2>Questions?</h2>
+          <img src="img/triangle_measure.svg" height=400px />
+        </section>
+
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/reveal/lib/js/head.min.js"></script>
+    <script type="text/javascript" src="js/reveal/js/reveal.js"></script>
+    <script type="text/javascript" src="js/browsercast/browsercast-reveal.js"></script>
+    <script type="text/javascript" src="js/browsercast/timeline/EventEmitter.js"></script>
+    <script type="text/javascript" src="js/browsercast/timeline/timeline.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+  </body>
+</html>

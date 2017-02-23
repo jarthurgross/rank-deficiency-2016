@@ -1,0 +1,99 @@
+#browsercast {
+	width: 100%;
+	position: absolute;
+	top: 5px; left: 5px;
+	z-index: 100;
+	transition: all 0.3s ease-out;
+}
+
+#browsercast #bc-audio {
+	display: none;
+}
+
+/**
+ * 	UI Overlay
+ */
+
+#browsercast #bc-overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+	display: none;
+}
+
+#browsercast #bc-overlay[active] {
+	display: block;
+}
+
+#browsercast #bc-overlay .state {
+	width: 30%;
+	margin: 0 35%;
+	background: #FFF;
+	opacity: 0.7;
+	border-radius: 5px;
+	text-align: center;
+	position: absolute;
+	top: 40%;
+}
+
+#browsercast #bc-overlay .stateinfo {
+	font-size: 400%;
+}
+
+#browsercast #bc-overlay .help {
+	font-size: 200%;
+}
+
+#browsercast #bc-markers {
+	width: 90%;
+	margin: 0 5%;
+	padding: 2px;
+	height: 12px;
+	background-color: #999;
+	position: absolute;
+	top: 10px;
+}
+
+/**
+ * Timeline	
+ */
+
+#browsercast #bc-timeline {
+	width: 80%;
+	margin: 0 10%;
+	top: 10px;
+	position: absolute;
+	transition: all 0.3s;
+}
+
+/**
+ * 	Hidden Mode - Youtube style
+ */
+
+#browsercast[data-hidden] #bc-timeline {
+	width: 100%;
+	margin: 0;
+	top: -10px;
+}
+
+#browsercast[data-hidden] #bc-timeline .timeline .time-pointer {
+	display: none;
+}
+
+#browsercast[data-hidden] #bc-timeline .timeline .time-info {
+	display: none;
+}
+
+#browsercast[data-hidden] #bc-timeline .timeline .play {
+	display: none;
+}
+
+#browsercast[data-hidden] #bc-timeline .timeline .event {
+	/*height: 10px;*/
+}
+
+#browsercast[data-hidden] #bc-timeline .timeline .event:after {
+	display: none;
+}

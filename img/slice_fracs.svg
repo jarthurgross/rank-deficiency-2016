@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with matplotlib (http://matplotlib.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="126.5196pt"
+   version="1.1"
+   viewBox="0 0 480.35178 126.5196"
+   width="480.35178pt"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="slice_fracs.svg">
+  <metadata
+     id="metadata76">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#414141"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     id="namedview74"
+     showgrid="false"
+     fit-margin-top="32"
+     fit-margin-left="32"
+     fit-margin-bottom="32"
+     fit-margin-right="32"
+     inkscape:zoom="0.82777778"
+     inkscape:cx="-31.504859"
+     inkscape:cy="125.40051"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="figure_1" />
+  <defs
+     id="defs4"
+     style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+    <style
+       type="text/css"
+       id="style6">
+*{stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000;}
+  </style>
+    <clipPath
+       id="pf46688a7dd-2"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="441.43448"
+         y="177.51724"
+         id="rect60-7"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+    <clipPath
+       id="clipPath4214"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="441.43448"
+         y="177.51724"
+         id="rect4216"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+    <clipPath
+       id="pa31783452e-0"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="349.07587"
+         y="177.51724"
+         id="rect72-9"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+    <clipPath
+       id="clipPath4220"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="349.07587"
+         y="177.51724"
+         id="rect4222"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+    <clipPath
+       id="p602e7165ed-3"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="256.71725"
+         y="177.51724"
+         id="rect66-6"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+    <clipPath
+       id="clipPath4226"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="256.71725"
+         y="177.51724"
+         id="rect4228"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+    <clipPath
+       id="p67ae2e1aa3-0"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="164.35863"
+         y="177.51724"
+         id="rect63-6"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+    <clipPath
+       id="clipPath4232"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="164.35863"
+         y="177.51724"
+         id="rect4234"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+    <clipPath
+       id="p0f93b42af7-2"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="72"
+         y="177.51724"
+         id="rect69-6"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+    <clipPath
+       id="clipPath4238"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="72"
+         y="177.51724"
+         id="rect4240"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+  </defs>
+  <g
+     id="figure_1"
+     style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
+     transform="translate(-55.036072,-152.74119)">
+    <g
+       transform="translate(-3.0602931e-6,1.9991965e-6)"
+       id="axes_1"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <g
+         id="line2d_1"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+        <path
+           clip-path="url(#p0f93b42af7-2)"
+           d="m 133.42944,216 -0.11049,-2.24917 -0.33042,-2.22751 -0.54716,-2.18439 -0.75864,-2.12025 -0.9628,-2.03567 -1.1577,-1.9315 -1.34145,-1.80873 -1.51227,-1.66854 -1.66853,-1.51227 -1.80873,-1.34144 -1.9315,-1.1577 -2.03568,-0.9628 -2.12024,-0.75864 -2.18439,-0.54716 -2.22751,-0.33042 -2.24917,-0.11049 -2.24917,0.11049 -2.22751,0.33042 -2.18439,0.54716 -2.12025,0.75864 -2.035673,0.9628 -1.931503,1.1577 -1.808727,1.34144 -1.668534,1.51227 -1.512271,1.66854 -1.341444,1.80873 -1.157698,1.9315 -0.962803,2.03567 -0.758636,2.12025 -0.547162,2.18439 -0.33042,2.22751 -0.110494,2.24917 0.110494,2.24917 0.33042,2.22751 0.547162,2.18439 0.758636,2.12025 0.962803,2.03567 1.157698,1.9315 1.341444,1.80873 1.512271,1.66854 1.668534,1.51227 1.808727,1.34144 1.931503,1.1577 2.035673,0.9628 2.12025,0.75864 2.18439,0.54716 2.22751,0.33042 2.24917,0.11049 2.24917,-0.11049 2.22751,-0.33042 2.18439,-0.54716 2.12024,-0.75864 2.03568,-0.9628 1.9315,-1.1577 1.80873,-1.34144 1.66853,-1.51227 1.51227,-1.66854 1.34145,-1.80873 1.1577,-1.9315 0.9628,-2.03567 0.75864,-2.12025 0.54716,-2.18439 0.33042,-2.22751 0.11049,-2.24917 0,0"
+           style="fill:none;stroke:#fbb4ae;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:100000"
+           id="path14"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="line2d_2"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+        <path
+           clip-path="url(#p0f93b42af7-2)"
+           d="M 99.009417,235.87241 110.48276,216 121.9561,235.87241"
+           style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:100000"
+           id="path17"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="matplotlib.axis_1"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+      <g
+         id="matplotlib.axis_2"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </g>
+    <g
+       transform="translate(-3.0602931e-6,1.9991965e-6)"
+       id="axes_2"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <g
+         id="line2d_3"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+        <path
+           clip-path="url(#p67ae2e1aa3-0)"
+           d="m 231.86689,216 -0.11218,-2.54945 -0.33568,-2.52975 -0.55658,-2.49048 -0.77318,-2.43198 -0.98381,-2.35465 -1.18682,-2.25915 -1.38067,-2.14617 -1.56385,-2.01661 -1.73492,-1.87145 -1.8926,-1.71183 -2.03565,-1.53897 -2.16295,-1.35423 -2.27354,-1.15902 -2.36655,-0.95483 -2.44128,-0.74328 -2.49713,-0.52598 -2.53367,-0.30461 -2.55064,-0.0809 -2.54788,0.14346 -2.52544,0.3667 -2.48347,0.5871 -2.4223,0.80297 -2.34241,1.01263 -2.24441,1.21446 -2.12906,1.4069 -1.99727,1.58847 -1.85001,1.75776 -1.68848,1.91346 -1.51388,2.05438 -1.32759,2.17941 -1.13102,2.28759 -0.92573,2.37809 -0.71326,2.45022 -0.4953,2.50339 -0.27349,2.53722 -0.0496,2.55144 0.17471,2.54593 0.39766,2.52075 0.61754,2.47607 0.83263,2.41227 1.0413,2.32981 1.24191,2.22933 1.43292,2.11165 1.61286,1.97761 1.78033,1.82831 1.93404,1.66487 2.0728,1.48856 2.19554,1.30074 2.3013,1.10287 2.38927,0.89647 2.45878,0.68314 2.50929,0.46454 2.54038,0.24234 2.55186,0.0183 2.54359,-0.20595 2.51568,-0.42856 2.46831,-0.64788 2.40187,-0.86217 2.31685,-1.06981 2.21393,-1.26917 2.0939,-1.45873 1.95767,-1.63701 1.80633,-1.80263 1.64101,-1.95433 1.46301,-2.09091 1.2737,-2.21133 1.07454,-2.31466 0.86708,-2.40009 0.65292,-2.46698 0.43371,-2.5148 0.21115,-2.54317 0.0219,-1.12767 0,0"
+           style="fill:none;stroke:#fbb4ae;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:100000"
+           id="path23"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="line2d_4"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+        <path
+           clip-path="url(#p67ae2e1aa3-0)"
+           d="M 188.32862,241.13683 202.84138,216 l 14.51276,25.13683"
+           style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:100000"
+           id="path26"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="matplotlib.axis_3"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+      <g
+         id="matplotlib.axis_4"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </g>
+    <g
+       transform="translate(-3.0602931e-6,1.9991965e-6)"
+       id="axes_3"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <g
+         id="line2d_5"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+        <path
+           clip-path="url(#p602e7165ed-3)"
+           d="m 325.98621,216 -0.11084,-2.61001 -0.33171,-2.59121 -0.55019,-2.55376 -0.76472,-2.49792 -0.97373,-2.4241 -1.17574,-2.33282 -1.36928,-2.22474 -1.55295,-2.10065 -1.72546,-1.96143 -1.88553,-1.80809 -2.03204,-1.64173 -2.16389,-1.46354 -2.28019,-1.27482 -2.38005,-1.07692 -2.46278,-0.87127 -2.52779,-0.65934 -2.57457,-0.44266 -2.60284,-0.2228 -2.61236,-0.001 -2.60307,0.22014 -2.57503,0.44003 -2.52845,0.65676 -2.46368,0.86874 -2.38115,1.07449 -2.28148,1.27249 -2.1654,1.46133 -2.03371,1.63964 -1.88738,1.80616 -1.72746,1.95967 -1.55511,2.09906 -1.37155,2.22334 -1.17812,2.33162 -0.97621,2.4231 -0.76727,2.49714 -0.55281,2.55319 -0.33436,2.59088 -0.1135,2.60989 0.10817,2.61011 0.32905,2.59155 0.54758,2.55433 0.76217,2.4987 0.97125,2.42509 1.17335,2.33402 1.367,2.22615 1.55081,2.10223 1.72345,1.9632 1.88369,1.81001 2.03035,1.6438 2.1624,1.46576 2.27888,1.27715 2.37895,1.07935 2.46189,0.87379 2.52711,0.66192 2.57412,0.4453 2.60261,0.22547 2.61235,0.004 2.60329,-0.21747 2.57548,-0.4374 2.52913,-0.65417 2.46456,-0.86623 2.38225,-1.07205 2.28279,-1.27016 2.16688,-1.45911 2.03539,-1.63756 1.88922,-1.80423 1.72947,-1.9579 1.55725,-2.09747 1.37383,-2.22194 1.1805,-2.33041 0.97869,-2.4221 0.76983,-2.49635 0.55541,-2.55263 0.33701,-2.59053 0.11617,-2.60977 7e-5,-0.063 0,0"
+           style="fill:none;stroke:#fbb4ae;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:100000"
+           id="path32"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="line2d_6"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+        <path
+           clip-path="url(#p602e7165ed-3)"
+           d="M 279.8069,242.66164 295.2,216 l 15.3931,26.66164"
+           style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:100000"
+           id="path35"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="matplotlib.axis_5"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+      <g
+         id="matplotlib.axis_6"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </g>
+    <g
+       transform="translate(-3.0602931e-6,1.9991965e-6)"
+       id="axes_4"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <g
+         id="line2d_7"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+        <path
+           clip-path="url(#pa31783452e-0)"
+           d="m 416.58413,216 -0.11218,-2.54945 -0.33568,-2.52975 -0.55658,-2.49048 -0.77318,-2.43198 -0.98381,-2.35465 -1.18682,-2.25915 -1.38067,-2.14617 -1.56384,-2.01661 -1.73493,-1.87145 -1.8926,-1.71183 -2.03564,-1.53897 -2.16296,-1.35423 -2.27354,-1.15902 -2.36655,-0.95483 -2.44128,-0.74328 -2.49712,-0.52598 -2.53368,-0.30461 -2.55064,-0.0809 -2.54788,0.14346 -2.52544,0.3667 -2.48346,0.5871 -2.4223,0.80297 -2.34241,1.01263 -2.24442,1.21446 -2.12906,1.4069 -1.99726,1.58847 -1.85002,1.75776 -1.68848,1.91346 -1.51388,2.05438 -1.32758,2.17941 -1.13103,2.28759 -0.92572,2.37809 -0.71327,2.45022 -0.49529,2.50339 -0.2735,2.53722 -0.0496,2.55144 0.17471,2.54593 0.39766,2.52075 0.61754,2.47607 0.83263,2.41227 1.0413,2.32981 1.24191,2.22933 1.43292,2.11165 1.61286,1.97761 1.78034,1.82831 1.93403,1.66487 2.0728,1.48856 2.19554,1.30074 2.3013,1.10287 2.38927,0.89647 2.45878,0.68314 2.50929,0.46454 2.54038,0.24234 2.55186,0.0183 2.5436,-0.20595 2.51567,-0.42856 2.46831,-0.64788 2.40187,-0.86217 2.31685,-1.06981 2.21393,-1.26917 2.0939,-1.45873 1.95768,-1.63701 1.80632,-1.80263 1.64101,-1.95433 1.46301,-2.09091 1.2737,-2.21133 1.07454,-2.31466 0.86709,-2.40009 0.65292,-2.46698 0.4337,-2.5148 0.21115,-2.54317 0.0219,-1.12767 0,0"
+           style="fill:none;stroke:#fbb4ae;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:100000"
+           id="path41"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="line2d_8"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+        <path
+           clip-path="url(#pa31783452e-0)"
+           d="M 373.04586,241.13683 387.55862,216 l 14.51276,25.13683"
+           style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:100000"
+           id="path44"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="matplotlib.axis_7"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+      <g
+         id="matplotlib.axis_8"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </g>
+    <g
+       transform="translate(-3.0602931e-6,1.9991965e-6)"
+       id="axes_5"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <g
+         id="line2d_9"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+        <path
+           clip-path="url(#pf46688a7dd-2)"
+           d="m 502.86392,216 -0.11049,-2.24917 -0.33042,-2.22751 -0.54716,-2.18439 -0.75864,-2.12025 -0.9628,-2.03567 -1.1577,-1.9315 -1.34144,-1.80873 -1.51227,-1.66854 -1.66854,-1.51227 -1.80872,-1.34144 -1.93151,-1.1577 -2.03567,-0.9628 -2.12025,-0.75864 -2.18439,-0.54716 -2.22751,-0.33042 -2.24917,-0.11049 -2.24917,0.11049 -2.22751,0.33042 -2.18439,0.54716 -2.12024,0.75864 -2.03568,0.9628 -1.9315,1.1577 -1.80873,1.34144 -1.66853,1.51227 -1.51228,1.66854 -1.34144,1.80873 -1.1577,1.9315 -0.9628,2.03567 -0.75864,2.12025 -0.54716,2.18439 -0.33042,2.22751 -0.11049,2.24917 0.11049,2.24917 0.33042,2.22751 0.54716,2.18439 0.75864,2.12025 0.9628,2.03567 1.1577,1.9315 1.34144,1.80873 1.51228,1.66854 1.66853,1.51227 1.80873,1.34144 1.9315,1.1577 2.03568,0.9628 2.12024,0.75864 2.18439,0.54716 2.22751,0.33042 2.24917,0.11049 2.24917,-0.11049 2.22751,-0.33042 2.18439,-0.54716 2.12025,-0.75864 2.03567,-0.9628 1.93151,-1.1577 1.80872,-1.34144 1.66854,-1.51227 1.51227,-1.66854 1.34144,-1.80873 1.1577,-1.9315 0.9628,-2.03567 0.75864,-2.12025 0.54716,-2.18439 0.33042,-2.22751 0.11049,-2.24917 0,0"
+           style="fill:none;stroke:#fbb4ae;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:100000"
+           id="path50"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="line2d_10"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+        <path
+           clip-path="url(#pf46688a7dd-2)"
+           d="M 468.4439,235.87241 479.91724,216 l 11.47334,19.87241"
+           style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:100000"
+           id="path53"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="matplotlib.axis_9"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+      <g
+         id="matplotlib.axis_10"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </g>
+  </g>
+  <defs
+     id="defs57">
+    <clipPath
+       id="pf46688a7dd"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="441.43448"
+         y="177.51724"
+         id="rect60"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+    <clipPath
+       id="p67ae2e1aa3"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="164.35863"
+         y="177.51724"
+         id="rect63"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+    <clipPath
+       id="p602e7165ed"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="256.71725"
+         y="177.51724"
+         id="rect66"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+    <clipPath
+       id="p0f93b42af7"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="72"
+         y="177.51724"
+         id="rect69"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+    <clipPath
+       id="pa31783452e"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+      <rect
+         height="76.965515"
+         width="76.965515"
+         x="349.07587"
+         y="177.51724"
+         id="rect72"
+         style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+    </clipPath>
+  </defs>
+</svg>
